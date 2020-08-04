@@ -1,11 +1,12 @@
-import React from 'react';
-import MenuCart from './containers/MenuCart';
+import React from "react";
+import MenuCart from "./containers/MenuCart";
 
 function App() {
   return (
-    <div>
-      <MenuCart />
-      
+    <div className="container">
+      <div className="app-holder">
+        <MenuCart />
+      </div>
     </div>
   );
 }
