@@ -1,20 +1,21 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import Cart from "./Cart";
 
 function MenuCart() {
-  const [menuData, setMenuData] = useState({
-    "2342153": {
+  const [menuData] = useState({
+    2342153: {
       productName: "Mouse",
       price: 199,
     },
 
-    "12364324": {
+    12364324: {
       productName: "Keyboard",
       price: 699,
     },
 
-    "7893424": {
+    7893424: {
       productName: "AMD CPU",
       price: 6999,
     },
@@ -24,7 +25,7 @@ function MenuCart() {
 
   useEffect(() => {
     let total = 0;
-    Object.keys(cartData).map((sku) => {
+    Object.keys(cartData).forEach((sku) => {
       let qty = cartData[sku];
       let price = menuData[sku].price;
       total += qty * price;
